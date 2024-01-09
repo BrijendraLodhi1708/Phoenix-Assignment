@@ -1,0 +1,13 @@
+<template>
+    <template if:true={flag}>
+    <lightning-card title="Account Record">
+        <lightning-datatable  key-field="id"  data={accdata} columns={column}>
+      </lightning-datatable>
+      </lightning-card>
+    
+    <lightning-card title="Related Contact List of Account">
+        <lightning-datatable  key-field="id"  data={contactdata} columns={columns}>
+      </lightning-datatable>
+      </lightning-card>
+    </template>
+</template>

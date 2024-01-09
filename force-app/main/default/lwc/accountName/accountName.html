@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Account Contact Use Case">
+        <lightning-combobox
+        name="Enter Account Name"
+        label="Account Name"
+        value={value}
+        placeholder="Select Account Name"
+        options={names} class="slds-m-left_x-small"
+        onchange={handleChange} ></lightning-combobox>
+     </lightning-card>
+  <br>
+     <lightning-button variant="brand" label="Create Related Contact" title="Create Related Contact"  onclick={handleRelatedContact1} class="slds-m-left_x-small"></lightning-button>
+     <lightning-button variant="brand" label="Display Account and Related Contact" title="Display Account and Related Contact" onclick={handleDisplay} class="slds-m-left_x-small"></lightning-button>
+
+     <br>
+     <!-- <template if:true={contactData}>
+     <lightning-datatable  key-field="id"  data={contactdata} columns={columns}>
+   </lightning-datatable>
+   </template> -->
+</template>

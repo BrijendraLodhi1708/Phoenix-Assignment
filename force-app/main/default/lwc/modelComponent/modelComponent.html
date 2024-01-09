@@ -1,0 +1,22 @@
+<template>
+    
+    <lightning-modal-header label="Create Related Contact"></lightning-modal-header>
+ 
+    <lightning-record-edit-form object-api-name="Contact" > 
+    
+        <lightning-modal-body>
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name="FirstName" onchange={handleFirstName} value ={FirstName} required></lightning-input-field>
+            <lightning-input-field field-name="LastName"  onchange={handleLastName} value ={LastName}  ></lightning-input-field>
+            <lightning-input-field field-name="Email"     onchange={handleEmail}    value ={Email} required></lightning-input-field>
+            <lightning-input-field field-name="Phone"     onchange={handlePhone}    value={Phone} required></lightning-input-field>
+
+        </lightning-modal-body>
+      
+        <lightning-modal-footer>
+            <lightning-button label="Cancel" onclick={handleClose} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button  variant="brand" type="submit" name="save" label="Save" class="slds-m-left_x-small" onclick={handleCreateContact}></lightning-button>
+        </lightning-modal-footer>
+    </lightning-record-edit-form>
+    
+</template>
